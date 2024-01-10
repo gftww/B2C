@@ -1,0 +1,11 @@
+numpy
+torch
+torchvision
+torchaudio
+scikit-learn
+tqdm
+matplotlib
+opencv-python
+opencv-contrib-python
+pycocotools
+argparse

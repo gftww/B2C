@@ -9,12 +9,12 @@ class Pose2Feat(nn.Module):
         super(Pose2Feat, self).__init__()
         self.joint_num = joint_num
         self.skeleton_num = len(skeleton)
-        #self.input_dim = self.joint_num+3*self.skeleton_num
+        self.input_dim = self.joint_num+3*self.skeleton_num
         #self.input_dim = self.joint_num
         #self.input_dim = self.skeleton_num
         #self.input_dim = self.joint_num+2*self.skeleton_num
         #self.input_dim = 3*self.skeleton_num
-        self.input_dim = self.joint_num+4*self.skeleton_num
+        #self.input_dim = self.joint_num+4*self.skeleton_num
 
         self.data_bn = nn.BatchNorm2d(self.input_dim)
         self.conv = make_conv_layers([self.input_dim,64])
